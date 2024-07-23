@@ -1,0 +1,144 @@
+## Using the steps below, I created the feature branch "feature_02/springbootpilot" from the master branch locally, made some changes, and pushed them to my remote repository "Spring-Microservices-Projects." You can see the details in the drop-down box.
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj
+$ git clone https://github.com/abjawed/Spring-Microservices-Projects.git
+Cloning into 'Spring-Microservices-Projects'...
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects: 100% (32/32), done.
+remote: Total 47 (delta 6), reused 28 (delta 0), pack-reused 0
+Receiving objects: 100% (47/47), 16.00 KiB | 5.33 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj
+$ ls -ltr
+total 0
+drwxr-xr-x 1 Jawed 197121 0 Jul 24 00:51 Spring-Microservices-Projects/
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj
+$ cd Spring-Microservices-Projects/
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (main)
+$ ls
+springbootpilot/
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (main)
+$ ls -a
+./  ../  .git/  springbootpilot/
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (main)
+$ git remote -v
+origin  https://github.com/abjawed/Spring-Microservices-Projects.git (fetch)
+origin  https://github.com/abjawed/Spring-Microservices-Projects.git (push)
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (main)
+$ git branch
+* main
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (main)
+$ git log --oneline
+aa603c8 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #1 from abjawed/feature_01/springbootpilot
+f244328 (origin/feature_01/springbootpilot) Update pom.xml
+c19a095 Delete springbootpilot/README
+bc1a80a Create README
+68eede4 Update about.me
+52aed4e Delete springbootpilot/Dockerfile.txt
+4cdf94a Adding the springbootpilot project to Github
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (main)
+$ git switch -c feature_02/springbootpilot
+Switched to a new branch 'feature_02/springbootpilot'
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ git log --oneline
+aa603c8 (HEAD -> feature_02/springbootpilot, origin/main, origin/HEAD, main) Merge pull request #1 from abjawed/feature_01/springbootpilot
+f244328 (origin/feature_01/springbootpilot) Update pom.xml
+c19a095 Delete springbootpilot/README
+bc1a80a Create README
+68eede4 Update about.me
+52aed4e Delete springbootpilot/Dockerfile.txt
+4cdf94a Adding the springbootpilot project to Github
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ ls
+springbootpilot/
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ vi springbootpilot/pom.xml
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ git status
+On branch feature_02/springbootpilot
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   springbootpilot/pom.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ git add .
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ git commit -m "updated the pom.xml from 1.1-SNAPSHOT to 1.2-SNAPSHOT"
+[feature_02/springbootpilot 0566039] updated the pom.xml from 1.1-SNAPSHOT to 1.2-SNAPSHOT
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ git log --oneline
+0566039 (HEAD -> feature_02/springbootpilot) updated the pom.xml from 1.1-SNAPSHOT to 1.2-SNAPSHOT
+aa603c8 (origin/main, origin/HEAD, main) Merge pull request #1 from abjawed/feature_01/springbootpilot
+f244328 (origin/feature_01/springbootpilot) Update pom.xml
+c19a095 Delete springbootpilot/README
+bc1a80a Create README
+68eede4 Update about.me
+52aed4e Delete springbootpilot/Dockerfile.txt
+4cdf94a Adding the springbootpilot project to Github
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+$ git push -u origin feature_02/springbootpilot
+## Note:- Since my GitHub credentials are already stored in the "Credential Manager," it won't prompt me to enter them. However, if you are pushing the code for the first time, you will need to enter your username and password through the command prompt or log in via browser using your username and access token.
+
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 371 bytes | 371.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature_02/springbootpilot' on GitHub by visiting:
+remote:      https://github.com/abjawed/Spring-Microservices-Projects/pull/new/feature_02/springbootpilot
+remote:
+To https://github.com/abjawed/Spring-Microservices-Projects.git
+ * [new branch]      feature_02/springbootpilot -> feature_02/springbootpilot
+Branch 'feature_02/springbootpilot' set up to track remote branch 'feature_02/springbootpilot' from 'origin'.
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/ms_prj/Spring-Microservices-Projects (feature_02/springbootpilot)
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/Home/devops_Edureka/DEVOPS_GIT/Devops (main)
+## To push to master branch use the below command only
+$ git push -u origin
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (16/16), 1.40 KiB | 718.00 KiB/s, done.
+Total 16 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/abjawed/Devops.git
+   49d77f4..cd9f7a5  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.

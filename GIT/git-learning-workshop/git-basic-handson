@@ -1,0 +1,515 @@
+Git basic Commands
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -lha
+total 4.0K
+drwxr-xr-x 1 Jawed 197121 0 Jun  9 01:13 ./
+drwxr-xr-x 1 Jawed 197121 0 Jun  9 01:08 ../
+drwxr-xr-x 1 Jawed 197121 0 Jun  9 01:10 .git/
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ vi file1.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls
+file1.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ cat > file2.txt
+File2
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -ltr
+total 2
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file1.txt
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file2.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ cat > file3.txx
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ^C
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -ltr
+total 2
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file1.txt
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file2.txt
+-rw-r--r-- 1 Jawed 197121 0 Jun  9 01:19 file3.txx
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ rm file3.txx
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ cat > file3.txt
+File3
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -ltr
+total 3
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file1.txt
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file2.txt
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:19 file3.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+        file2.txt
+        file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git add *.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+        new file:   file2.txt
+        new file:   file3.txt
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ it log --oneline
+bash: it: command not found
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git commit -m "Added all 3 files"
+[master (root-commit) f231806] Added all 3 files
+ 3 files changed, 3 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+ create mode 100644 file3.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ it log --oneline
+bash: it: command not found
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit f231806825387dd0807886cfeb27100c78a85b12 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -ltr
+total 3
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file1.txt
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:18 file2.txt
+-rw-r--r-- 1 Jawed 197121 6 Jun  9 01:19 file3.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ vi file3.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -ltr
+total 3
+-rw-r--r-- 1 Jawed 197121  6 Jun  9 01:18 file1.txt
+-rw-r--r-- 1 Jawed 197121  6 Jun  9 01:18 file2.txt
+-rw-r--r-- 1 Jawed 197121 20 Jun  9 01:24 file3.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git commit -m "Added file3 files"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git add .
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -ltr
+total 3
+-rw-r--r-- 1 Jawed 197121  6 Jun  9 01:18 file1.txt
+-rw-r--r-- 1 Jawed 197121  6 Jun  9 01:18 file2.txt
+-rw-r--r-- 1 Jawed 197121 20 Jun  9 01:24 file3.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file3.txt
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit f231806825387dd0807886cfeb27100c78a85b12 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ cat > file 4
+cat: 4: No such file or directory
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -ltr
+total 3
+-rw-r--r-- 1 Jawed 197121  6 Jun  9 01:18 file1.txt
+-rw-r--r-- 1 Jawed 197121  6 Jun  9 01:18 file2.txt
+-rw-r--r-- 1 Jawed 197121 20 Jun  9 01:24 file3.txt
+-rw-r--r-- 1 Jawed 197121  0 Jun  9 01:27 file
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ rm file
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ cat > file4.txt
+File4
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ ls -tr
+file1.txt  file2.txt  file3.txt  file4.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git commit -m "added file 4"
+[master 101b76c] added file 4
+ 1 file changed, 1 insertion(+)
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git statis
+git: 'statis' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ gir log
+bash: gir: command not found
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git lo
+git: 'lo' is not a git command. See 'git --help'.
+
+The most similar commands are
+        log
+        flow
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit 101b76cf7c21652785cda5c6195fc844cdf162c1 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:29:05 2024 +0530
+
+    added file 4
+
+commit f231806825387dd0807886cfeb27100c78a85b12
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ cat > file5.txt
+File5
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file4.txt
+        file5.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit 101b76cf7c21652785cda5c6195fc844cdf162c1 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:29:05 2024 +0530
+
+    added file 4
+
+commit f231806825387dd0807886cfeb27100c78a85b12
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git add .
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file4.txt
+        new file:   file5.txt
+
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit 101b76cf7c21652785cda5c6195fc844cdf162c1 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:29:05 2024 +0530
+
+    added file 4
+
+commit f231806825387dd0807886cfeb27100c78a85b12
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git commit -m "Added 4 and 5 file"
+[master c6eaf9a] Added 4 and 5 file
+ 2 files changed, 2 insertions(+)
+ create mode 100644 file4.txt
+ create mode 100644 file5.txt
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit c6eaf9a28ee02c89c388dd6c047947bf219e5c90 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:32:31 2024 +0530
+
+    Added 4 and 5 file
+
+commit 101b76cf7c21652785cda5c6195fc844cdf162c1
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:29:05 2024 +0530
+
+    added file 4
+
+commit f231806825387dd0807886cfeb27100c78a85b12
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit c6eaf9a28ee02c89c388dd6c047947bf219e5c90 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:32:31 2024 +0530
+
+    Added 4 and 5 file
+
+commit 101b76cf7c21652785cda5c6195fc844cdf162c1
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:29:05 2024 +0530
+
+    added file 4
+
+commit f231806825387dd0807886cfeb27100c78a85b12
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log online
+fatal: ambiguous argument 'online': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log -online
+fatal: unrecognized argument: -online
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log
+commit c6eaf9a28ee02c89c388dd6c047947bf219e5c90 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:32:31 2024 +0530
+
+    Added 4 and 5 file
+
+commit 101b76cf7c21652785cda5c6195fc844cdf162c1
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:29:05 2024 +0530
+
+    added file 4
+
+commit f231806825387dd0807886cfeb27100c78a85b12
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:22:56 2024 +0530
+
+    Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log --oneline
+c6eaf9a (HEAD -> master) Added 4 and 5 file
+101b76c added file 4
+f231806 Added all 3 files
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log -2
+commit c6eaf9a28ee02c89c388dd6c047947bf219e5c90 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:32:31 2024 +0530
+
+    Added 4 and 5 file
+
+commit 101b76cf7c21652785cda5c6195fc844cdf162c1
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:29:05 2024 +0530
+
+    added file 4
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git log -1
+commit c6eaf9a28ee02c89c388dd6c047947bf219e5c90 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:32:31 2024 +0530
+
+    Added 4 and 5 file
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git show c6eaf9a28ee
+commit c6eaf9a28ee02c89c388dd6c047947bf219e5c90 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:32:31 2024 +0530
+
+    Added 4 and 5 file
+
+diff --git a/file4.txt b/file4.txt
+new file mode 100644
+index 0000000..95825cb
+--- /dev/null
++++ b/file4.txt
+@@ -0,0 +1 @@
++File4
+diff --git a/file5.txt b/file5.txt
+new file mode 100644
+index 0000000..309df9d
+--- /dev/null
++++ b/file5.txt
+@@ -0,0 +1 @@
++File5
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)
+$ git show c6eaf9a28ee02c89c388dd6c047947bf219e5c90
+commit c6eaf9a28ee02c89c388dd6c047947bf219e5c90 (HEAD -> master)
+Author: abjawed <jawed@abc.com>
+Date:   Sun Jun 9 01:32:31 2024 +0530
+
+    Added 4 and 5 file
+
+diff --git a/file4.txt b/file4.txt
+new file mode 100644
+index 0000000..95825cb
+--- /dev/null
++++ b/file4.txt
+@@ -0,0 +1 @@
++File4
+diff --git a/file5.txt b/file5.txt
+new file mode 100644
+index 0000000..309df9d
+--- /dev/null
++++ b/file5.txt
+@@ -0,0 +1 @@
++File5
+
+Jawed@LAPTOP-AA0913BB MINGW64 /c/devops/Git_Handson/DCP_Working (master)

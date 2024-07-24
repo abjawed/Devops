@@ -90,6 +90,7 @@
 
 ### GIT Commands
 
+- `git init`: Initialize a local repository.
 - `git clone`: Copy/clone a remote repository to the local machine.
 - `git add`: Add changes from the working directory to the staging area.
 - `git commit`: Commit changes from the staging area to the local repository.
@@ -97,7 +98,6 @@
 - `git fetch`: Check for incremental changes in the remote repository.
 - `git pull`: Fetch and merge changes from the remote repository to the working directory and local repository.
 - `git fork`: Copy a remote repository to another remote repository.
-- `git init`: Initialize a local repository.
 - `git status`: Get the current status of the repository.
 - `git log`: Get the list of commits.
 - `git reset`: Undo commits.

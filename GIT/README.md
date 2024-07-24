@@ -64,16 +64,17 @@
 2. Centralized Version Control System
 3. Distributed Version Control System
 
-## GIT
+### GIT
 
 - An open-source distributed version control system.
 - Used to version control changes and track changes.
 - Supports parallel development using branching techniques.
 
-### GIT and GitHub
+### GitHub
 
-- **GIT**: CLI tool installed locally to maintain local git repositories.
-- **GitHub**: Remote server to maintain remote git repositories.
+- An open-source remote source code management tool.
+- Hosts repositories (collections of folders and files) online.
+- Other similar tools: Azure Repos, Bitbucket, AWS CodeCommit, GitLab.
 
 ## Working with GIT
 

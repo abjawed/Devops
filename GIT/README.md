@@ -76,6 +76,12 @@
 - Hosts repositories (collections of folders and files) online.
 - Other similar tools: Azure Repos, Bitbucket, AWS CodeCommit, GitLab.
 
+### Repository
+
+- Collection of folders and files.
+- Maintains versions of the source code.
+- Example: mywebapp.html with different versions like mywebapp.html_v1.0, mywebapp.html_v1.1, etc.
+
 ## Working with GIT
 
 1. **Install GIT CLI**:
@@ -88,6 +94,18 @@
    --------------|--------------|------------------|-------------------
    `mywebapp.html` | `mywebapp.html` | `mywebapp.html_v1.0` | `mywebapp.html_v1.0`
    - `git add` | - `git commit` | - `git push`
+
+   #### Stages
+   - Working Directory: Current state of your project files.
+   - Staging Area: Files added here are prepared for the next commit.
+   - Git Local Repository: Stores committed versions.
+   - Remote Repository: Hosted version on platforms like GitHub.
+  
+   #### Workflow Commands:
+
+    - git add: Add changes to the staging area.
+    - git commit: Commit changes to the local repository.
+    - git push: Push changes to the remote repository.
 
 ### GIT Commands
 

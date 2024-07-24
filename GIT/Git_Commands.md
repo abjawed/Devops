@@ -1,3 +1,175 @@
+# Git and GitHub Guide
+
+## 1. Introduction
+### 1.1 What is Git
+- Git is a version control system that helps you keep track of code changes, collaborate on code, and manage different versions of your projects.
+
+### 1.2 Why Git
+- Git allows developers to work together from anywhere in the world, see the full history of a project, and revert to earlier versions if needed. Over 70% of developers use Git.
+
+### 1.3 Features of Git
+- Tracks changes in files
+- Stages modified files
+- Commits snapshots of staged files
+- Maintains a detailed history of commits
+- Allows reverting to previous commits
+- Optimizes storage by tracking changes rather than storing multiple copies of files
+
+### 1.4 What is GitHub
+- GitHub is a platform that hosts Git repositories, enabling developers to collaborate on projects. It's the largest host of source code globally and has been owned by Microsoft since 2018.
+
+## 2. Configuring Git for the First Time
+```bash
+$ git config --global user.name "<Enter your username here>"
+$ git config --global user.email "<Enter your email here>"
+```
+
+## 3. General Git Features
+
+### 3.1 Initializing Git
+- To start tracking a project with Git, initialize a repository:
+```bash
+$ git init
+```
+
+### 3.2 Staging Files
+- To stage files for commit:
+```bash
+$ git add <filename>
+$ git add --all
+$ git add -A
+```
+
+### 3.3 Making a Commit
+- To commit staged files:
+```bash
+$ git commit -m "<Enter your message here>"
+```
+- To commit changes directly, skipping the staging area:
+```bash
+$ git commit -a -m "<Enter your message here>"
+```
+
+### 3.4 Status of Files and Log
+- To check the status of files:
+```bash
+$ git status
+$ git status --short
+```
+- To view commit history:
+```bash
+$ git log
+$ git log --oneline
+```
+
+## 4. Git Help
+- For command help:
+```bash
+$ git <command> --help
+$ git help --all
+```
+
+## 5. Git Branching
+
+### 5.1 Making a New Git Branch
+```bash
+$ git branch <name of branch>
+```
+
+### 5.2 Checking All Available Branches
+```bash
+$ git branch
+```
+
+### 5.3 Switching to Other Branches
+```bash
+$ git checkout <branch name>
+```
+
+### 5.4 Making a New Branch and Directly Switching to It
+```bash
+$ git checkout -b <branch name>
+```
+
+### 5.5 Deleting a Branch
+```bash
+$ git branch -d <branch name>
+```
+
+### 5.6 Merging Two Branches
+- Ensure you are on the branch you want to merge into (e.g., `master`):
+```bash
+$ git merge <branch name>
+```
+
+## 6. Working with GitHub
+
+### 6.1 Push Local Repo to GitHub
+- Add a remote repository and push your code:
+```bash
+$ git remote add origin <paste copied URL here>
+$ git push --set-upstream origin master
+```
+
+### 6.2 Pull Local Repo from GitHub
+```bash
+$ git pull origin
+```
+
+### 6.3 Pull Branch from GitHub
+```bash
+$ git branch -a
+$ git branch -r
+$ git checkout <branch name>
+$ git pull
+```
+
+### 6.4 Push Branch to GitHub
+```bash
+$ git checkout -b <branch name>
+$ git commit -a -m "<Message>"
+$ git push origin <branch name>
+```
+
+### Git Clone from GitHub
+```bash
+$ git clone <copied URL>
+$ git clone <copied URL> <folder name>
+```
+
+## 7. Git Undo
+
+### 7.1 Git Revert
+- To revert the latest commit:
+```bash
+$ git revert HEAD --no-edit
+```
+- To revert to a specific commit:
+```bash
+$ git revert HEAD~x
+```
+
+### 7.2 Git Reset
+- To reset the repository to a specific commit:
+```bash
+$ git reset <commithash>
+```
+
+### 7.3 Git Amend
+- To amend the most recent commit:
+```bash
+$ git commit --amend -m "<Commit Message>"
+```
+
+### Git Amend Files
+- Add files to the staging environment before amending:
+```bash
+$ git add <file>
+$ git commit --amend
+```
+
+
+
 ## Git Commands Overview
 
 ### Basic Commands

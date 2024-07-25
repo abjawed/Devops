@@ -31,8 +31,13 @@ $ git config --global user.email "<Enter your email here>"
 ```bash
 $ git init
 ```
+### 3.2 Clone the Repository
+- "Clone the repository to get a copy of the project's code on your local machine."
+```bash
+$ git clone
+```
 
-### 3.2 Staging Files
+### 3.3 Staging Files
 - To stage files for commit:
 ```bash
 $ git add <filename>
@@ -40,7 +45,7 @@ $ git add --all
 $ git add -A
 ```
 
-### 3.3 Making a Commit
+### 3.4 Making a Commit
 - To commit staged files:
 ```bash
 $ git commit -m "<Enter your message here>"
@@ -50,7 +55,7 @@ $ git commit -m "<Enter your message here>"
 $ git commit -a -m "<Enter your message here>"
 ```
 
-### 3.4 Status of Files and Log
+### 3.5 Status of Files and Log
 - To check the status of files:
 ```bash
 $ git status

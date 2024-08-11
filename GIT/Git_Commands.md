@@ -165,7 +165,6 @@ $ git reset <commithash>
 ```bash
 $ git commit --amend -m "<Commit Message>"
 ```
-
 ### Git Amend Files
 - Add files to the staging environment before amending:
 ```bash
@@ -173,6 +172,11 @@ $ git add <file>
 $ git commit --amend
 ```
 
+### 7.4 Git Amend
+- To Show changes between working directory and staging area:
+```bash
+$ git diff
+```
 
 
 ## Git Commands Overview

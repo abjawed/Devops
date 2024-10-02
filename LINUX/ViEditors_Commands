@@ -1,4 +1,5 @@
-#!/bin/sh -> echo "BEGNING OF THE SCRIPT"
+#!/bin/sh 
+echo "BEGNING OF THE SCRIPT"
 
 echo "########################## BASIC SHELL COMMANDS ##########################################"
 echo "ZZ   -> Alternate of the :wq!"
